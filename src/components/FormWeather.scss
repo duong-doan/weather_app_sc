@@ -1,0 +1,71 @@
+.form-weather {
+    form {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+        margin-top: 1rem;
+        position: relative;
+
+        input {
+            padding: 1.2rem 2rem;
+            margin: 0 1rem;
+            font-size: 1.6rem;
+            width: 60%;
+
+            // border-color: transparent transparent #38495a transparent;
+            border: none;
+            outline: none;
+            position: relative;
+
+            background: -webkit-linear-gradient(white, #38495a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        input:focus {
+            cursor: text;
+        }
+
+        .un-city {
+            width: 340px;
+            height: 2px;
+            background-color: #38495a;
+
+            position: absolute;
+            bottom: -5%;
+            left: 2%;
+        }
+
+        .un-country {
+            width: 340px;
+            height: 2px;
+            background-color: #38495a;
+
+            position: absolute;
+            bottom: -5%;
+            left: 44%;
+        }
+
+        button {
+            min-width: 180px;
+            padding: 1rem 1.2rem;
+            font-weight: 600;
+            font-size: 1rem;
+
+            border-radius: 10px;
+            border: none;
+            outline: none;
+
+            color: #38495a;
+            box-shadow: 2px 2px 2px #999;
+            background: linear-gradient(white, #38495a);
+        }
+
+        button:hover {
+            opacity: 0.8;
+            background-color: #161b20;
+            cursor: pointer;
+            transition: linear 0.2s;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.weather {
+    margin: auto;
+    width: 50%;
+    transition: linear 1s;
+
+    .card__weather {
+        width: 100%;
+        text-align: center;
+
+        .card__city {
+            font-size: 2.4rem;
+            margin: 2rem 0;
+            background: -webkit-linear-gradient(white, #596877);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card__status-img {
+            background: -webkit-linear-gradient(white, #596877);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 8rem;
+        }
+
+        .card__temp {
+            background: -webkit-linear-gradient(white, #596877);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.2rem;
+            margin: 2rem 0;
+        }
+
+        .card__wrap {
+            background: -webkit-linear-gradient(white, #596877);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .wrap__temp-min,
+            .wrap__temp-max {
+                font-size: 2rem;
+                margin: 0;
+            }
+        }
+
+        .card__status {
+            background: -webkit-linear-gradient(white, #596877);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2rem;
+            margin: 2rem;
+        }
+    }
+}
