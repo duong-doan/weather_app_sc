@@ -24,7 +24,6 @@ const Weather = ({
 
 const minmaxTemp = (min, max) => {
     if (min && max) {
-
         return (
             <div className="card__wrap">
                 <h5 className="wrap__temp-min">{min}&deg;C</h5>

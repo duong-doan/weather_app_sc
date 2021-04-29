@@ -35,15 +35,18 @@ class App extends Component {
     const valueCountry = e.target.elements.country.value;
     const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${valueCity},${valueCountry}&appid=${API_key}`)
     const response = await api_call.json();
-    this.setState({
-      city: `${response.name}, ${response.sys.country}`,
-      temp: this.ceilNum(response.main.temp),
-      temp_min: this.ceilNum(response.main.temp_min),
-      temp_max: this.ceilNum(response.main.temp_max),
-      description: response.weather[0].main,
-    })
-    console.log(response);
-    this.getWeatherIcon(this.weatherIcon, response.weather[0].id)
+    if (valueCity === '' || valueCountry === '') {
+      alert('Enter city and country')
+    } else {
+      this.setState({
+        city: `${response.name}, ${response.sys.country}`,
+        temp: this.ceilNum(response.main.temp),
+        temp_min: this.ceilNum(response.main.temp_min),
+        temp_max: this.ceilNum(response.main.temp_max),
+        description: response.weather[0].main,
+      })
+      this.getWeatherIcon(this.weatherIcon, response.weather[0].id)
+    }
   }
 
   getWeatherIcon = (rangeId) => {
@@ -72,9 +75,7 @@ class App extends Component {
         break;
 
       case rangeId >= 801 && rangeId <= 804:
-        console.log(this.weatherIcon.Clouds);
         this.setState({ icon: this.weatherIcon.Clouds })
-      // return this.weatherIcon.Clouds
 
       default:
         this.setState({ icon: this.weatherIcon.Clouds })
@@ -88,7 +89,6 @@ class App extends Component {
   }
 
   render() {
-
     return (
       <div className="App">
         <div id="stars"></div>
